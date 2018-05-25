@@ -1,0 +1,8 @@
+@model IEnumerable<ChurchWebsite.Models.Movie>
+@{ 
+  Layout = "../Shared/_Layout.Phone.cshtml";
+  ViewBag.Title = "Phone Lists";
+  ViewBag.ShowHomeButton = true;
+}
+
+@Html.Partial("_NewLists")

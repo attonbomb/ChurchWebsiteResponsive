@@ -1,0 +1,19 @@
+﻿@{ Layout = "../Shared/_Layout.Tablet.cshtml"; }
+
+@{
+    ViewBag.Title = "Tablet Home Page";
+}
+<div data-role="collapsible" data-theme="a" data-content-theme="a" data-collapsed="true">
+    <h2>Home Page</h2>
+    @Html.Partial("_Index_SubPage1")
+</div>
+
+<div data-role="collapsible" data-theme="a" data-content-theme="a" data-collapsed="true">
+    <h3>We suggest the following:</h3>
+    @Html.Partial("_Index_SubPage3")
+</div>
+
+<div data-role="collapsible" data-theme="a" data-content-theme="a" data-collapsed="true">
+    <h2>Features</h2>
+    @Html.Partial("_Index_SubPage4")
+</div>

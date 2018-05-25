@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ChurchWebsite.Models.CEvent>
+
+@foreach( var evt in Model )
+{
+    if (ViewBag.mobile == 1 && evt.imgId == null || evt.imgId == 10)
+    {
+        continue;
+    }
+    <div class="upcomingEvtItem">
+        <h4>@evt.PrettyDateStartString</h4><!--add getter to model to get pretty date -->
+        <div id="underline"></div>
+        <h5>@evt.title <text>(@Convert.ToDateTime(evt.start).ToShortTimeString() - @Convert.ToDateTime(evt.end).ToShortTimeString())</text></h5>
+        <p>@evt.description</p>
+        @if (Convert.ToDateTime(evt.start).ToShortDateString() != DateTime.Today.ToShortDateString() || ViewBag.mobile == 1)
+        {
+            if (evt.imgId != null && evt.imgId != 10)
+            {
+                <img src="@Url.Action("GetPhotoThumbnail", "Admin/Image", new { id = @evt.imgId, width = 240, height = 460 })" id="@evt.imgId" />
+            }
+        }
+    </div>
+}

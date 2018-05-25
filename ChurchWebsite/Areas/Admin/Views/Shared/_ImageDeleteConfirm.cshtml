@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ChurchWebsite.Models.CEvent>
+<p>Are you sure want to delete this image?</p>
+
+@if(Model.Count() > 0)
+{
+    <p>This image is currently used in the following Events:</p>
+    <ul>
+        @foreach (var evt in Model)
+        {
+            if (evt.Recurring)
+            {
+                <li>@evt.title (Recurring from (@string.Format("{0:dd/MM/yyyy}", evt.start))</li>
+            }
+            else
+            {
+                <li>@evt.title (@string.Format("{0:dd/MM/yyyy}", evt.start))</li>
+            }
+        }
+    </ul>
+    <p>The images for these events will be replaced by the default image placeholder once deleted.</p>
+}

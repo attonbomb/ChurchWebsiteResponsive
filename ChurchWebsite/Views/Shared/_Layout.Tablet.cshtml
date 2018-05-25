@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="no" />
+        <!-- watch for 20 pixel bleed -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- the precomposed tells ios that this icon displays as is -->
+        <!-- iPad Low-Res -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-start-image" href="~/Content/images/startup_image_768x1004.png" media="(device-width: 768px) and (orientation: portrait)" />
+        <!-- Landscape -->
+        <link rel="apple-touch-start-image" href="~/Content/images/startup_image_1024x748.png" media="(device-width: 768px) and (orientation: landscape)" />
+        <!-- iPad Hi-Res -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/images/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-start-image" href="~/Content/images/startup_image_1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" />
+        <!-- Landscape -->
+        <link rel="apple-touch-start-image" href="~/Content/images/startup_image_2048x1496.png" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" />
+        <!-- Android doesn't support the sizes tag -->
+        <link rel="apple-touch-icon-precomposed" sizes="android-only" href="~/Content/images/apple-touch-icon-57x57.png" />
+        <!-- default -->
+        <link rel="apple-touch-icon-precomposed" href="~/Content/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-start-image" href="~/Content/images/startup_image_768x1004.png" />
+        <script type="text/javascript" src="@Url.Content("~/Scripts/PromptForBookmark.js")"></script>
+        @Styles.Render("~/Content/MobileCSS")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/MobileJS")
+    </head>
+    <body>
+    <div data-role="page" data-theme="b">
+      <div data-role="header" data-theme="b">
+        <h1>@ViewBag.Title [TABLET]</h1>
+        @Html.Partial("_NavBar")
+      </div>
+      <div data-role="content" data-theme="d">
+            @RenderSection("featured", false)
+            @RenderBody()
+      </div>
+    </div>
+  </bodv>
+</html>

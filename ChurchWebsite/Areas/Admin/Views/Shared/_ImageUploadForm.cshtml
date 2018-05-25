@@ -1,0 +1,26 @@
+﻿@model ChurchWebsite.Models.CImage
+
+<!------------------------------------------------------------->
+<div id="FormContainer">
+    @using (Html.BeginForm("_ImageUploadForm", "Image", FormMethod.Post, new { enctype = "multipart/form-data", id = "ImgForm", name = "ImgForm", target = "UploadTarget" }))
+    {
+	    <h3>Upload Image</h3>
+        @Html.ValidationSummary(true)
+        <div>
+            @Html.LabelFor(model => model.title):
+            @Html.EditorFor(model => model.title)
+        </div>
+        <div>
+            @Html.ValidationMessageFor(model => model.title)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.description):
+            @Html.EditorFor(model => model.description)
+        </div>
+        <input type="file" name="imageFile" />
+        <input type="button" value="Save Image" onclick="UploadImage()" />
+    }
+    <iframe id="UploadTarget" name="UploadTarget" onload="UploadImage_Complete();" style="position: absolute; left: -999em; top: -999em;"></iframe>
+    <div id="Images"></div>
+</div>
+<script src="~/Areas/Admin/Scripts/MyScripts/MyFileUploadScript.js" type="text/javascript"></script>

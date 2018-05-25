@@ -1,0 +1,29 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapNodeModelList
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+@if (Model[0].Attributes.ContainsKey("ulType"))
+{
+    <ul class="@Model[0].Attributes["ulType"].ToString()">
+        @foreach (var node in Model) { 
+        <li>@Html.DisplayFor(m => node) 
+            @if (node.Children.Any()) {
+                @Html.DisplayFor(m => node.Children)
+            }
+        </li>
+    }
+    </ul>
+}
+else
+{
+    <ul>
+        @foreach (var node in Model) { 
+        <li>@Html.DisplayFor(m => node) 
+            @if (node.Children.Any()) {
+                @Html.DisplayFor(m => node.Children)
+            }
+        </li>
+    }
+    </ul>
+}
+    

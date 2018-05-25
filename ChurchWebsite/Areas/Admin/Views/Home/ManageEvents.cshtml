@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "ManageEvents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+@section styles {
+    <link href="~/Areas/Admin/Content/fullcalendar.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link href="~/Areas/Admin/Content/imageLibrary.css" rel="stylesheet" type="text/css"/>
+}
+
+@section scripts {
+    <script src="~/Areas/Admin/Scripts/moment.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/fullcalendar.js"></script>
+    <script src="~/Areas/Admin/Scripts/MyScripts/MyCalendarScript.js"></script>
+}
+
+<h2>Manage Events</h2>
+
+<div id='calendar' style='margin:3em 0;font-size:13px'></div>
+<div id="createForm"></div>
+<div id="editRecEventDialog"></div>
+
+

@@ -1,0 +1,11 @@
+﻿<span style="font-size: 0.7em;">
+    Switch To:
+    @Html.ActionLink("Desktop View", "SwitchView", "ViewSwitcher", new { mobile = false, mobileType = "Desktop",
+                        returnUrl = Request.Url.PathAndQuery}, new { rel = "external" })
+    @Html.ActionLink("Tablet View", "SwitchView", "ViewSwitcher", new { mobile = true, mobileType = "Tablet",
+                        returnUrl = Request.Url.PathAndQuery}, new { rel = "external" })
+    @Html.ActionLink("Phone View", "SwitchView", "ViewSwitcher", new { mobile = true, mobileType = "Phone",
+                        returnUrl = Request.Url.PathAndQuery}, new { rel = "external" })
+    @Html.ActionLink("Default View", "SwitchView", "ViewSwitcher", new { mobile = false, mobileType = "Default",
+                        returnUrl = Request.Url.PathAndQuery}, new { rel = "external" })
+</span>

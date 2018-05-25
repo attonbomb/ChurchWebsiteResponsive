@@ -1,0 +1,27 @@
+﻿@model ChurchWebsite.Models.CYouTubeItemModel
+@section metadata{
+    <meta property="og:title" content="@Model.Title" />
+    <meta property="og:site_name" content="NEW TESTAMENT CHURCH OF GOD (LEEDS)"/>
+    <meta property="og:url" content="http://www.ntcgleeds.com/Media/Sermons" />
+    <meta property="og:description" content="@Model.Description" />
+    <meta property="fb:app_id" content="895378180550460" />
+    <meta property="og:type" content="video" />
+    <meta property="og:image" content="http://ntcgleeds.com/Content/images/facebook/Are-You-Ready-To-Do-Your-Part-FB.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+}
+
+@section scripts{
+    <script src="~/Scripts/MyMainScripts/YouTubeVideoPlayerScript.js" type="text/javascript"></script>
+}
+<a name="Sermons"></a>
+
+<div id="sermonVidTarget">
+</div>
+<h2>Sermons</h2>
+<div id="sermonVidList">
+    @Html.Action("_VideosList", "Media")
+</div>
+<div class="videosMoreButton"><a url="#">MORE</a></div>
+
+

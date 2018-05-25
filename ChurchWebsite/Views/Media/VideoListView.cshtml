@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ChurchWebsite.Models.CYouTubeItemModel>
+
+<ul class="sermonsVidList">
+    @foreach (var video in Model)
+    {
+        <li>
+            <div class="sermonsVidListItem">
+                <div>
+                    <img src="@video.SmallThumb"/>
+                    <h4>@video.Title</h4>
+                    <p>@video.Description</p>
+                    <textarea hidden="hidden">@video.VideoId</textarea>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+

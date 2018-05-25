@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/Content/SiteMobile.css" rel="stylesheet" />
+        <link href="~/Content/slicknav.css" rel="stylesheet" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+        <script src="~/Scripts/jquery.slicknav.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#menu').slicknav({
+                    'label':''
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+    <!--<div data-role="page" data-theme="a">
+      <div data-role="header" data-position="fixed" data-theme="a">
+        <h1>@ViewBag.Title [PHONE]</h1>-->
+        @Html.Partial("_NavBar")
+        @*@{
+            bool ShowBackButton = false;
+            bool ShowHomeButton = false;
+            if(ViewBag.ShowBackButton != null && ViewBag.ShowBackButton == true)
+            {
+                ShowBackButton = true;  
+            }
+            if (ViewBag.ShowHomeButton != null && ViewBag.ShowHomeButton == true)
+            {
+                ShowHomeButton = true;
+            }
+            if(ShowBackButton)
+            {
+                <a data-rel="back" data-role="button" data-transition="slide" data-direction="reverse"
+                    data-icon="back">Back</a>
+            }
+            if(ShowHomeButton)
+            {
+                <a href="@Url.Action("Index", "Home")" data-role="button" data-transition="slide" data-direction="reverse"
+                    data-icon="home">Home</a>
+            }
+        }*@
+      <!--</div>-->
+      <!--<div data-role="content" data-theme="a">-->
+      <div>
+            @*@RenderSection("featured", false)*@
+            @RenderBody()
+            @*@Html.Partial("_ViewSwitcher")*@
+      </div> 
+      @*<div data-role="footer" data-position="fixed" data-theme="a">
+            @Html.Partial("_NavBar")
+      </div> *@ 
+    <!--</div>-->
+    </body>
+</html>

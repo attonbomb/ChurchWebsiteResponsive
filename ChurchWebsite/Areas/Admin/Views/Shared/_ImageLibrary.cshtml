@@ -1,0 +1,28 @@
+﻿@model ChurchWebsite.Models.ImageLibraryModel
+
+<div class="wrap">
+    <!-- Define all of the tiles: -->
+    @foreach (var item in Model.displayImages)
+    {
+        <!-- Define all of the tiles: -->
+        <div class="box">
+            <div class="boxInner">
+                <img src="@Url.Action("GetPhotoThumbnail", "Image", new { id = item.imageID, width = 10, height = 10 })" id="@item.imageID"/>
+                <div class="titleBox">@item.title</div> 
+            </div>
+        </div>
+    }
+</div>
+<div class="dialogFormElement">
+    
+    @*if (Model.displayMode == 0 || Model.displayMode == -1)
+    {
+        <input type="button" id="bannerUploadBut" value="Upload Banner Image" />
+    }
+    @if (Model.displayMode == 1 || Model.displayMode == -1)
+    {
+        <input type="button" id="evtImgUploadBut" value="Upload Home Screen Event Image" />
+    }*@
+</div>
+<div id="imageUploadDialog" style="display: none"/>
+<div id="deleteAreYouSureDiog" style="display: none"/>

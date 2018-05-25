@@ -1,0 +1,85 @@
+﻿@using PerpetuumSoft.Knockout
+@using ChurchWebsite.Models
+@using ChurchWebsite.Areas.Admin.Extensions
+@model ChurchWebsite.Models.CEvent
+
+<script type="text/javascript">
+    var viewModel = new DynamicModelLoading(@Html.Raw(Model.ToJson()));
+    ko.applyBindings(viewModel);
+</script>
+
+
+<div id="dialog" title="Basic dialog" class="eventDialogue">
+    <div id="eventFormHolder">
+    @if (Model.id == 0)
+    {
+        <h2>New Event</h2>
+    }
+    else
+    {
+        <h2>Edit Event</h2>
+    }
+    
+        @using (Ajax.BeginForm(Model.id == 0 ? "Create" : "Update", "Calendar", new AjaxOptions{ InsertionMode = InsertionMode.Replace,//target element(#pacientList) will be replace)))
+                                                                                                UpdateTargetId = "eventFormHolder", OnSuccess = "onEventFormSubmissionSuccess", HttpMethod = "POST"
+                                                                                                    @*LoadingElementId = "loader" //div with .gif loader*@}))
+        {
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.id)
+            <p>@Html.TextBoxFor(model => model.EventDate)</p>
+            <div class="dialogFormElement">
+                @Html.LabelFor(model => model.title)&nbsp;:@Html.EditorFor(model => model.title)
+            </div>
+            <div class="dialogFormValidation">
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+            <div class="dialogFormElement">
+                @Html.LabelFor(model => model.description)&nbsp;:@Html.EditorFor(model => model.description)
+            </div>
+            <div class="dialogFormValidation">
+                @Html.ValidationMessageFor(model => model.description)
+            </div>
+            <div class="dialogFormElement" id="m_recurringEventChkBox" data-bind="ifnot: recurranceRef">
+                @Html.Label("Recurring Event")&nbsp;:@Html.CheckBoxFor(m => m.Recurring, new { data_bind="checked: Recurring" })
+            </div>
+            <div class="dialogFormElement" data-bind="visible: Recurring" >
+                @Html.Label("Recurance Type")&nbsp;:@Html.DropDownListFor(m => m.recurranceType, Model.CurrentRecurranceOptions)
+            </div>
+            <div class="dialogFormElement">
+                @Html.LabelFor(model => model.showInCal)&nbsp;:@Html.CheckBoxFor(model => model.showInCal)
+            </div>
+            <div class="dialogFormElement">
+                @Html.LabelFor(model => model.showOnHome)&nbsp;:@Html.CheckBoxFor(model => model.showOnHome, new { data_bind="checked: showOnHome" })
+            </div>
+            @Html.HiddenFor(model => model.imgId, new {data_bind="value: imgId"})
+            <div class="dialogFormElement">
+                <input readonly="true" type="text"/>
+                <input type="button" id="imgLib_button" value="Choose Image" />
+            </div>
+            <div class="dialogFormValidation">
+                @Html.ValidationMessageFor(model => model.imgId)
+            </div>
+            <div id="imagePlaceholder"/>
+            <div class="dialogFormElement">
+                @Html.LabelFor(model => model.allDay)&nbsp;:@Html.CheckBoxFor(m => m.allDay, new { data_bind="checked: allDay"})
+            </div>
+            <div class="dialogFormElement" data-bind="visible: !allDay()")>
+                @Html.LabelFor(model => model.start)&nbsp;:@Html.EditorFor(model => model.StartTime)
+            </div>
+            <div class="dialogFormValidation">
+                @Html.ValidationMessageFor(model => model.StartTime)
+            </div>
+            <div id="m_endTimeDiv" class="dialogFormElement" data-bind="visible: !allDay()">
+                @Html.LabelFor(model => model.end)&nbsp;:@Html.EditorFor(model => model.EndTime)
+            </div>
+            <div class="dialogFormValidation">
+                @Html.ValidationMessageFor(model => model.EndTime)
+            </div>
+            <div class="dialogFormElement" data-bind="visible: showOnHome">
+                @Html.LabelFor(model => model.url)&nbsp;:@Html.EditorFor(model => model.url)
+            </div>
+        }
+    </div>
+</div>
+<div id="imageLib" />
+<div id="eventDeleteDialog" />

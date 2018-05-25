@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="https://ukwsp.com:8172/msdeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="ntcgleeds.com" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="ntcgleeds.com_dploy" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2BBT5UEl+kyZj1pA56kMCAAAAAACAAAAAAADZgAAqAAAABAAAAAgMBYa+430cWoOBPxC4I4JAAAAAASAAACgAAAAEAAAALQxFYKFzUzu/Ny08js7mZAYAAAAHCte5RL4M6z4KjgHO4PiPnuqXIVoGecrFAAAACdZcfO69ZOlIyFN6GTTDItqd3OJ" SelectedForPublish="True" />
+</publishData>

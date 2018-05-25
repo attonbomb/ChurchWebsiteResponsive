@@ -1,0 +1,45 @@
+﻿<div class="panels-header">
+    <div>
+        <ul>
+            <li id="today">Today</li>
+            <li id="upcoming">Upcoming</li>
+            <li id="tweets"><img src="../../Content/images/twitter-bird-white.png"/>Twitter</li>
+        </ul>
+    </div>  
+</div>
+<div class="news_panel">
+    <div class="mobileEventsContainer">
+        <div class="upcomingEvtsTitle">
+            <h4>Events&#64;NTCGLEEDS</h4>
+        </div>
+        <div class="upcomingEvtsContainer" id="mobileEventsSlider">
+             @Html.Action("_UpcomingEvents", "Home", new { mobile = 1})
+        </div>
+    </div>
+    <div class="newsPanelItem">
+        <img class="dayEvtImage" src="@Url.Action("GetTodaysEventImage", "Home")" />
+    </div>
+    <div class="newsPanelItem">
+        <div class="upcomingEvtsTitle">
+            <h4>Events&#64;NTCGLEEDS</h4>
+        </div>
+        <div class="upcomingEvtsPanel">
+            <div class="upcomingEvtsContainer">
+                @Html.Action("_UpcomingEvents", "Home")
+            </div>
+        </div>
+    </div>
+    <div height="500" class="newsPanelItem">
+        <a class="twitter-timeline" href="https://twitter.com/BishopParry" data-widget-id="563834605913276416">Tweets by &#64;BishopParry</a>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+    </div>
+</div>
+<div class="featured-links">
+    <ul>
+        <li><a href="About/MinistryTeam">MINISTRY TEAM</a></li>
+        <li><a href="Visiting/ServiceTimes">SERVICE TIMES</a></li>
+        <li><a href="WorkingChurch/International">INTERNATIONAL MISSIONS</a></li>
+        <li><a href="About/Testimonies">TESTIMONIES</a></li>
+        <li><a href="About/DeclarationOfFaith">DECLARATION OF FAITH</a></li>
+    </ul>
+</div>

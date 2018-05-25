@@ -1,0 +1,11 @@
+﻿@using PerpetuumSoft.Knockout
+@using ChurchWebsite.Areas.Admin.Extensions
+@model ChurchWebsite.Models.CEvent
+
+<script type="text/javascript">
+    var viewModel = new DynamicModelLoading(@Html.Raw(Model.ToJson()));
+    ko.applyBindings(viewModel);
+</script>
+
+<p>The event you are editing is a recurring event beginning @string.Format("{0:dd/MM/yyyy}", Model.start)</p>
+<p>Do you want to edit every occurance of this event or just this instance?</p>

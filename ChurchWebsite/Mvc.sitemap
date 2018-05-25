@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="HOME" controller="Home" action="Index">
+    <mvcSiteMapNode title="ABOUT US" controller="About" action="Index">
+        <mvcSiteMapNode title="Beliefs" controller="About" action="Beliefs" ulType="submenuHidden"/>
+        <mvcSiteMapNode title="Vision" controller="About" action="Vision"/>
+        <!--<mvcSiteMapNode title="Ministry Team" controller="About" action="MinistryTeam"/>-->
+        <mvcSiteMapNode title="History" controller="About" action="History"/>
+        <mvcSiteMapNode title="Testimonies" controller="About" action="Testimonies"/>
+        <mvcSiteMapNode title="Declaration Of Faith" controller="About" action="DeclarationOfFaith"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="VISITING" controller="Visiting" action="Index">
+        <mvcSiteMapNode title="Service Times" controller="Visiting" action="ServiceTimes" ulType="submenuHidden"/>
+        <mvcSiteMapNode title="What To Expect" controller="Visiting" action="WhatToExpect"/>
+        <mvcSiteMapNode title="Provision For Children" controller="Visiting" action="ProvForChildren"/>
+        <mvcSiteMapNode title="Weekly Programme" controller="Visiting" action="WeeklyProg"/>
+        <mvcSiteMapNode title="Contact" controller="Visiting" action="Contact"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="YOUTH" controller="Youth" action="Index">
+      <mvcSiteMapNode title="Youth Activities" controller="Youth" action="YouthActivities" ulType="submenuHidden"/>
+      <!--<mvcSiteMapNode title="Kings Daughters" controller="Youth" action="KingsDaughters"/>
+      <mvcSiteMapNode title="Youth Ministries" controller="Youth" action="YouthMinistries"/>
+      <mvcSiteMapNode title="Youth Days" controller="Youth" action="YouthDays"/>-->
+      <mvcSiteMapNode title="Sunday School" controller="Youth" action="SundaySchool"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="WORKING CHURCH" controller="WorkingChurch" action="Index">
+      <!--<mvcSiteMapNode title="International" controller="WorkingChurch" action="International" ulType="submenuHidden"/>
+      <mvcSiteMapNode title="InTheCommunity" controller="WorkingChurch" action="In The Community"/>-->
+      <mvcSiteMapNode title="In Church" controller="WorkingChurch" action="InChurch" ulType="submenuHidden"/>
+      <!--<mvcSiteMapNode title="Adult Education" controller="WorkingChurch" action="AdultEducation"/>
+      <mvcSiteMapNode title="Get Involved" controller="WorkingChurch" action="GetInvolved"/>-->
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="SERMONS/MEDIA" controller="Media" action="Index">
+      <mvcSiteMapNode title="Sermons" controller="Media" action="Sermons" ulType="submenuHidden"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="ADMIN" controller="Home" action="Index" roles="Admin" area="Admin">
+      <mvcSiteMapNode title="Manage Events" controller="Home" action="ManageEvents" ulType="submenuHidden" roles="Admin" area="Admin"/>
+      <mvcSiteMapNode title="Manage Sermons" controller="Home" action="SermonManagement" ulType="submenuHidden" roles="Admin" area="Admin"/>
+      <mvcSiteMapNode title="Manage Banner Images" controller="Home" action="ManageBannerImages" ulType="submenuHidden" roles="Admin" area="Admin"/>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>

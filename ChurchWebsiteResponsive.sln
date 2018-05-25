@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChurchWebsite", "ChurchWebsite\ChurchWebsite.csproj", "{23E99A8A-D368-45D0-9F51-1723EABD6257}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E7A78716-98B0-45C3-BE84-101C27361BFE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumBlog.Resources", "EnumBlog.Resources\EnumBlog.Resources.csproj", "{86E4005F-6127-4E0C-BECC-A3BC880B67FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E99A8A-D368-45D0-9F51-1723EABD6257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E99A8A-D368-45D0-9F51-1723EABD6257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E99A8A-D368-45D0-9F51-1723EABD6257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E99A8A-D368-45D0-9F51-1723EABD6257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E4005F-6127-4E0C-BECC-A3BC880B67FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E4005F-6127-4E0C-BECC-A3BC880B67FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E4005F-6127-4E0C-BECC-A3BC880B67FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E4005F-6127-4E0C-BECC-A3BC880B67FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

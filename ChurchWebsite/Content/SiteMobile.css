@@ -1,0 +1,851 @@
+﻿@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: .85em;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: small;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    /* margin-bottom: 0em; */
+    padding-bottom: 0;
+    padding-left: 10px;
+    /*padding-right: 10px;*/
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    text-transform: uppercase;
+    /* letter-spacing: .1em; */
+    font-size: 2.7em;
+    margin: 0.2em;
+    padding-left: 2px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 2.0em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin: auto;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+h5 a:link, h5 a:visited, h5 a:active {
+    padding: 0;
+    text-decoration: none;
+}
+
+.standardPageBody p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.standardPageBody h4 {
+    margin-top: 10px;
+}
+
+.more_text {
+    display: none;
+}
+
+.readMoreContainer {
+    background-color: #aaa;
+    margin: 10px;
+    /* margin-right: 40px; */
+    /* height: 50px; */
+    /* align-content: space-between; */
+    /* align-items: baseline; */
+    /* width: 100%; */
+}
+
+.readMoreContainer a {
+    display: block;
+    text-decoration: initial;
+    /* margin-left: 180px; */
+    /* padding-left: 39%; */
+    /* padding-top: 40%; */
+    text-align: center;
+    font-size: 20pt;
+    text-transform: uppercase;
+    color: white;
+    /* padding-top: 100px; */
+    /* width: 50%; */
+    /* margin: 0 auto; */
+}
+
+.videosMoreButton {
+    background-color: #aaa;
+    margin: 10px;
+}
+
+.videosMoreButton a {
+    text-decoration: initial;
+    font-size: 20pt;
+    display: block;
+    text-align: center;
+}
+
+.siteWrapper {
+    overflow: hidden;
+}
+
+.fakeHeader {
+    display: block;
+    height:44px;
+}
+
+.js #menu {
+	display:none;
+}
+	
+.js .slicknav_menu {
+	display:block;
+}
+
+.float-right {
+    display: none;
+}
+
+.float-left {
+    display: -webkit-inline-box;
+    position: fixed;
+    top: 9px;
+    left: 8px;
+    z-index: 999;
+}
+
+.float-left img {
+    width: 20px;
+}
+
+.site-title {
+    font-size: smaller;
+    margin: 4px;
+    z-index: 200;
+}
+
+#subNavContainer {
+    display:none;
+}
+
+
+/*-----------------------Banner-----------------------*/
+
+#banner-slide{
+	width:100%;
+	margin-bottom: 20px;/*
+	border-style:solid;
+	border-color: Blue;*/
+}
+
+.banner-slide {
+    display: -webkit-box;
+}
+
+.rslides{
+  margin: 0 auto 40px;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+.centered-btns_nav {
+  z-index: 3;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 20%;
+  left: 0;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("themes.gif") no-repeat left top;
+  /* margin-top: -170px; */
+  display: block;
+}
+
+.centered-btns_nav:active {
+  opacity: 1.0;
+  }
+
+.centered-btns_nav.next {
+  left: 876px;
+  background-position: right top;
+  /* right: 0; */
+  margin-top: -60px;
+}
+
+.centered-btns .caption {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  /* font-size: 20px; */
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 10px;
+  margin: 0;
+  max-width: none;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.centered-btns_nav:focus{
+  outline: none;
+  }
+
+.centered-btns_tabs {
+  margin-top: 10px;
+  text-align: center;
+  }
+
+.centered-btns_tabs li{
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px;
+  }
+
+.centered-btns_tabs a{
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: #ccc;
+  background: rgba(0,0,0, .2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  width: 9px;
+  height: 9px;
+  }
+
+.centered-btns_here a {
+  background: #222;
+  background: rgba(0,0,0, .8);
+}
+
+a.centered-btns_nav.centered-btns1_nav.prev {
+    display: none;
+}
+
+a.centered-btns_nav.centered-btns1_nav.next {
+    display: none;
+}
+
+/*---When this is not the home page---*/
+
+.standardPageHeaderImg {
+    /* margin-top: -20px; */
+    display: block;
+    height: 360px;
+    /* float: left; */
+    width: 100%;
+    border: 0;
+    padding-bottom: 10px;
+    min-height: 100px;
+    -ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+    background-size: cover;
+    max-width: 1200px;
+}
+
+    .standardPageHeaderImg img {
+        visibility:hidden;
+    }
+
+.aboutUsImg {
+    background-image: url(/Content/images/banner_images/About-Us-Banner.gif);
+    background-position: right bottom;
+}
+
+.beliefsImg {
+    background-image: url(/Content/images/banner_images/Beliefs-Banner.gif);
+}
+
+.visionImg {
+    background-image: url(/Content/images/banner_images/Vision-Banner.gif);
+    -ms-background-position-x: right;
+    -ms-background-position-y: bottom;
+    background-position: right bottom;
+}
+
+.ministryTeamImg {
+    background-image: url(/Content/images/banner_images/Ministry-Team-Banner.gif);
+}
+
+.historyImg {
+    background-image: url(/Content/images/banner_images/History-Banner.gif);
+    -ms-background-position-x: left;
+    -ms-background-position-y: bottom;
+    background-position: left bottom;
+}
+
+.testimoniesImg {
+    background-image: url(/Content/images/banner_images/Testimonies-Banner.gif);
+    -ms-background-position-x: right;
+    -ms-background-position-y: bottom;
+    background-position: right bottom;
+}
+
+.decOfFaithImg {
+    background-image: url(/Content/images/banner_images/Declaration-of-Faith-Banner.gif);
+}
+
+.visitingImg {
+    background-image: url(/Content/images/banner_images/Visiting-Banner.gif);
+}
+
+.serviceTimesImg {
+    background-image: url(/Content/images/banner_images/Service-Times-Banner.gif);
+    -ms-background-position-x: right;
+    -ms-background-position-y: bottom;
+    background-position: right bottom;
+}
+
+.whatToExpectImg {
+    background-image: url(/Content/images/banner_images/What-To-Expect-Banner.gif);
+}
+
+.provForChildrenImg {
+    background-image: url(/Content/images/banner_images/Provision-For-Children-Banner.gif);
+    -ms-background-position-x: left;
+    -ms-background-position-y: bottom;
+    background-position: left bottom;
+}
+
+.weeklyProgrammeImg {
+    background-image: url(/Content/images/banner_images/Weekly-Programme-Banner.gif);
+}
+
+.contactImg {
+    background-image: url(/Content/images/banner_images/Contact-Banner.gif);
+    -ms-background-position-x: right;
+    -ms-background-position-y: bottom;
+    background-position: right bottom;
+}
+
+.youthImg {
+    background-image: url(/Content/images/banner_images/Youth-Banner.gif);
+}
+
+.youthActivitiesImg {
+    background-image: url(/Content/images/banner_images/Youth-Activities-Banner.gif);
+}
+
+.kingsDaughtersImg {
+    background-image: url(/Content/images/banner_images/Kings-Daughters-Banner.gif);
+    -ms-background-position-x: right;
+    -ms-background-position-y: bottom;
+    background-position: right bottom;
+}
+
+.youthMinistriesImg {
+    background-image: url(/Content/images/banner_images/Youth-Ministries-Banner.gif);
+}
+
+.youthDaysImg {
+    background-image: url(/Content/images/banner_images/Youth-Days-Banner.gif);
+}
+
+.sundaySchoolImg {
+    background-image: url(/Content/images/banner_images/Sunday-School-Banner.gif);
+    -ms-background-position-x: left;
+    -ms-background-position-y: bottom;
+    background-position: left bottom;
+}
+
+.workingChurchImg {
+    background-image: url(/Content/images/banner_images/Working-Church-Banner.gif);
+}
+
+.adultEducationImg {
+    background-image: url(/Content/images/banner_images/Adult-Education-Banner.gif);
+    -ms-background-position-x: left;
+    -ms-background-position-y: bottom;
+    background-position: left bottom;
+}
+
+.getInvolvedImg {
+    background-image: url(/Content/images/banner_images/Get-Involved-Banner.gif);
+}
+
+.inChurchImg {
+    background-image: url(/Content/images/banner_images/In-Church-Banner.gif);
+}
+
+.internationalImg {
+    background-image: url(/Content/images/banner_images/International-Banner.gif);
+}
+
+.inTheCommunityImg {
+    background-image: url(/Content/images/banner_images/In-The-Community-Banner.gif);
+}
+
+/*====================Features=======================================*/
+
+.left_feature a {
+    text-decoration: none;
+    display: block;
+}
+
+.left_feature a:hover {
+    background-color:white;
+}
+
+.right_feature a {
+    text-decoration: none;
+    display: block;
+}
+
+.right_feature a:hover {
+    background-color:white;
+}
+
+
+/*=======================BANNER FOOTER-------------------------------------*/
+
+.banner-footer div img {
+    display: none;
+}
+
+.banner-footer-text {
+    display: block !important;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    text-align: -webkit-center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.banner-footer {
+    display: block;
+    width: 100%;      
+	height: 100%;
+	background-color: #000000;      
+    background: url("../Content/images/news_panel_back.png") repeat;
+    /* background-size: 150px 150px; */
+    margin: 0px;
+    margin-top: 2px;
+    padding-bottom: 1em;
+}
+
+.banner-footer-text p {
+    font-size: 12pt;
+}
+
+.banner-slide ul li img p {
+    display: none !important;
+}
+
+/*-----------------------FEATURED---------------------------*/
+
+.featured_link
+{
+    display: block;
+    margin-top: -13px;
+    /* margin-left: .7em; */
+    /* margin-right: .2em; */
+}
+
+.left_feature
+{
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;   
+    background-color: #eeeeee;
+}
+
+.left_feature h2, .left_feature p
+{
+    margin-top: 0;
+    font-weight: 500;
+    color: black;
+}
+
+.left_feature img
+{
+    float: left;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 120px;
+}
+
+.right_feature
+{
+    float: right;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    /* margin-left: 1.5em; */
+}
+
+.right_feature h2, .right_feature p
+{
+    margin-top: 0;
+    font-weight: 500;
+    color: black;
+}
+
+.right_feature div iframe
+{
+    float: left;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+/*==================================NEWS PANEL==================================*/
+
+.panels-header
+{
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    display: -webkit-box;
+    background: url("./styling/shattered.png") repeat;
+    background-size: 100px 100px;
+}
+
+.panels-header div {
+    width: 100%;
+    height:30px;
+    display: block;
+    background: url("./images/mobile-diagonal-end.png") no-repeat;
+}
+
+.panels-header div ul {
+    display: none;
+}
+
+.newsPanelItem {
+    display:none;
+}
+
+.upcomingEvtsTitle h4 {
+    margin: 0px;
+    color: #FFFFFF;
+    margin-top: -25px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.upcomingEvtsContainer {
+    /*overflow-y: scroll;
+    height: 92%;
+    padding-left: 10px;
+    border-bottom-width: thin;  
+    border-bottom-color: rgb(68, 68, 68);  
+    border-bottom-style: solid;*/
+}
+
+.upcomingEvtItem {
+    border-width: thin;  
+    border-color: rgb(68, 68, 68);  
+    border-style: solid;
+    width: 248px;
+    height: 496px;
+    padding: 5px;
+    margin: 3px;
+    margin-right: 0px;
+    background-color: #333333;
+    background: url("../Content/images/news_panel_back.png") repeat;
+}
+
+.upcomingEvtsContainer div h4 {
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+    color: #FFFFFF;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+.upcomingEvtsContainer div #underline {
+    background-color: #666;
+    height: 0.5px;
+    margin: 0px;
+    width: 245px;
+}
+
+.upcomingEvtsContainer div h5 {
+    margin-top: 5px;
+    font-style: italic;
+    color: #FFFFFF;
+    display: none;
+}
+
+.upcomingEvtsContainer div p {
+    font-style: italic;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-bottom: 0px;
+    height: 55px;
+}
+
+.upcomingEvtsContainer div img {
+    padding-top: 1em;
+    padding-left: 0.3em;
+}
+
+.featured-links {
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    display: block;
+    background: url("./styling/shattered.png") repeat;
+    background-size: 100px 100px;
+}
+
+.featured-links ul {
+    display:none;
+}
+
+.slick-next {
+    display:none !important;
+}
+
+.slick-prev {
+    display:none !important;
+}
+
+.slick-dots {
+    display:none !important;
+}
+
+/*------------------Sermons-------------------*/
+
+.sermonsVidPlayerWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 0.2em;
+}
+
+.sermonsVidPlayerWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.sermonsVidList {
+    /*padding-left: 0px;*/
+    /* display: inline-block; */
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.sermonsVidListItem {
+
+/* display: block; */
+
+/* margin-left: 10px; */
+}
+    .sermonsVidListItem div {
+        /*display: inline-block;
+        width: 100%;
+        border-bottom-style: dotted;
+        border-bottom-color: #666666;*/
+        display: inline-block;
+        width: 100%;
+        border-bottom-style: dotted;
+        border-bottom-color: #666666;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    .sermonsVidListItem div:hover {
+        background-color: #CCCCCC;
+    }
+
+    .sermonsVidListItem div img {
+        /*width: 160px;
+        float: left;
+        padding: 0.4em;*/
+        display: block;
+        float: left;
+        clear: both;
+        padding-right: 0.4em;
+        padding-left: 10px;
+        /* margin: auto; */
+    }
+
+    .sermonsVidListItem div h4 {
+        /* margin-top: 0.4em; */
+    }
+
+    .sermonsVidListItem div p {
+    /* display: block; */
+    /* float: none; */
+    margin: 0.1em;
+    }
+
+/*=====================================FOOTER====================================*/
+
+footer {
+    clear: both;
+    background-color: black;
+    font-size: .8em;
+    height: 180px;
+}
+
+.footer-nav-container {
+    display:none;
+}
+
+.address-container {
+    float: left;
+    color: #FFF;
+    line-height: 0.5em;
+    padding-top: 1px;
+    padding-left: 10px;
+    font-size: 7pt;
+    width: 145px;
+}
+
+.mail-tel-container {
+    padding-top: 1px;
+    color: #FFF;
+    line-height: 0.5em;
+    font-size: 9pt;
+    height: 100%;
+    text-align: right;
+    width: 100%;
+}
+
+.footer-nav-container {
+    float: left;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.address-container p a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px;
+    padding-left: 0px;
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+.address-container p a img {
+    visibility:visible !important;
+}
+
+.mail-tel-container p a img {
+    visibility:visible !important;
+    position: absolute;
+    display: block;
+    left: 45px;
+}
+
+
+.address-container img {
+    vertical-align: middle;
+    visibility:hidden;
+    width: 30px;
+    padding-top: 6px;
+}
+
+.mail-tel-container img {
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.address-container span {
+    visibility:hidden;
+}
+.mail-tel-container span {
+
+    visibility: hidden;
+}
+
+.mail-tel-container p a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.mail-tel-container div {
+    height: 100%;
+    padding-top: 3em;
+}
+
+.address-container p {
+    font-size: 8pt;
+}
+
+.mail-tel-container p {
+    font-size: 8pt;
+    padding-right: 10px;
+}

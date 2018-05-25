@@ -1,0 +1,5 @@
+ChurchWebsite/bin/
+ChurchWebsite/obj/
+EnumBlog.Resources/obj/
+packages/
+ChurchWebsite/App_Data/ASPNETDB.MDF
